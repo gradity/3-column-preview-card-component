@@ -1,0 +1,91 @@
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 920px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    @media (max-width: 960px) {
+        flex-direction: column;
+        max-width: 326px;
+    }
+
+    > * {
+        height: 500px;
+        padding: 48px 51px 50px 46px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 3fr 1fr;
+
+        > .car-icon {
+            grid-row: 1;
+        }
+
+        > h1 {
+            grid-row: 2;
+            color: $veryLightGray;
+        }
+
+        > p {
+            grid-row: 3;
+            color: $transparentWhite;
+        }
+
+        .cta {
+            grid-row: 4;
+
+            background-color: $veryLightGray;
+            border: 2px solid $veryLightGray;
+            border-radius: 22px;
+            padding: 10px 0;
+            max-width: 148px;
+            max-height: 48px;
+            text-align: center;
+            text-justify: auto;
+        }
+
+        @media (max-width: 960px) {
+            max-height: 442px;
+        }
+    
+    }
+
+    .sedans {
+        background-color: $brightOrange;
+
+        .cta {
+            color: $brightOrange;
+        }
+
+        .cta:active {
+            background-color: $brightOrange;
+            color: $veryLightGray;
+        }
+    }
+
+    .suvs {
+        background-color: $DarkCyan;
+
+        .cta {
+            color: $DarkCyan;
+        }
+
+        .cta:active {
+            background-color: $DarkCyan;
+            color: $veryLightGray;
+        }
+    }
+
+    .luxury {
+        background-color: $veryDarkCyan;
+
+        .cta {
+            color: $veryDarkCyan;
+        }
+
+        .cta:active {
+            background-color: $veryDarkCyan;
+            color: $veryLightGray;
+        }
+    }
+}
